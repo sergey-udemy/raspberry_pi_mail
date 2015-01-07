@@ -5,7 +5,7 @@ This documents how to get a Raspberry Pi to email its IP address when it boots u
 
 These are my notes on getting a Raspberry Pi to email me its address when connected to a network.  I wanted to be able to plug the Pi into a netowrk and then ssh into it and do what I needed.  After some digging, and piecing together, and trying things that didn't work, arrived in the following place.  This is not to say this is the easiest, or simplest way to do this, it is just the what I found.  I welcome feedback on this matter.
 
-`sudo apt-get mailutils ssmtp`
+`sudo apt-get install mailutils ssmtp`
 
 Add a new line to /etc/ssmtp/revaliases like : `root:email.account.to.send.mail.from@somewhere.com:smtp.gmail.com:587`
 where you change the `email.account.to.send.mail@somewhere.com` to the account where you want to recieve the email with your Raspberry Pis IP. 
